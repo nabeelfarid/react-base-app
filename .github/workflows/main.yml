@@ -39,5 +39,5 @@ jobs:
         run: npm install --g surge
         
       - name: Deploy Production build on Surge
-        run: surge ./build reactbaseapp.nabeelfarid.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build reactbaseapp.nabeelfarid.surge.sh --token ${{ secrets.SURGE_TOKEN }}
 
