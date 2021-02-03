@@ -27,17 +27,17 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v2-beta
         with:
-          key: 12
+          node-version: 12
 
       - name: Install Surge
-        run: npm install -g surge
+        run: npm install --g surge
         
-      - name: Install Project Dependecies
-        run: npm install
+      # - name: Install Project Dependecies
+      #  run: npm install
          
-      - name: Create Production Build
-        run: npm run build 
+      #- name: Create Production Build
+      #  run: npm run build 
        
-      - name: Deploy on Surge
-        run: surge ./build reactbaseapp.nabeelfarid.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
+      #- name: Deploy on Surge
+      #  run: surge ./build reactbaseapp.nabeelfarid.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
 
